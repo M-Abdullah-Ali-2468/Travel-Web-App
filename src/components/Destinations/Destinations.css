@@ -101,7 +101,7 @@
   .images {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 
   .imgs {
