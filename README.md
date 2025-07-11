@@ -116,7 +116,7 @@ This app uses a centralized layout structure located in `src/Layout/`:
 ## 🤝 Connect with Me
 
 * 🔗 **GitHub**: [@M-Abdullah-Ali-2468](https://github.com/M-Abdullah-Ali-2468)
-* 📧 **Email**: [youremail@example.com](mailto:youremail@example.com) <!-- Replace with your actual email -->
+* 📧 **Email**: [mabdullahali8642@gmail.com](mailto:mabdullahali8642@gmail.com)
 
 ---
 
