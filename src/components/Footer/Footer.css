@@ -1,0 +1,99 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  
+  min-height: 30vh; /* Gives breathing room */
+  height: auto;     /* Grows with content */
+
+
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #333;
+}
+
+.web-logo-text h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.web-logo-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.social-contancts {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 1.3rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #1da1f2;
+  transform: scale(1.1);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 160px;
+}
+
+.footer-box h5 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #00bcd4;
+}
+
+.footer-box a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.15rem; /* Increased font size */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-box a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .top, .bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .social-contancts {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-box {
+    align-items: center;
+  }
+}

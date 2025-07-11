@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar layout */
+.nav_bar {
+  display: flex;
+  background-color: white;
+  color: black;
+  height: 10%;
+  position: fixed;
+  width: 96%;
+  border-radius: 10px;
+  top: 2%;
+  left: 2%;
+  padding: 1%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border: 2px solid black;
+}
+
+/* Logo styling */
+.logo {
+  font-style: italic;
+  font-size: xx-large;
+}
+
+/* Toggle icon (hidden by default) */
+.menu-icns {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Desktop menu layout */
+.menuItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuItems ul {
+  display: flex;
+  gap: 15px;
+}
+
+.menuItems ul li {
+  list-style: none;
+}
+
+.menuItems li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menuItems li a:hover {
+  background-color: #baff39;
+}
+
+/* Sign Up Button */
+.menuItems button {
+  margin-left: 20px;
+  padding: 8px 14px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ------------------------ */
+/* ✅ Responsive Design     */
+/* ------------------------ */
+@media screen and (max-width: 800px) {
+  /* Show menu icon */
+  .menu-icns {
+    display: flex;
+    padding: 5px;
+    z-index: 1001;
+  }
+
+  /* Hide menuItems by default on small screens */
+  .menuItems {
+    display: none;
+    position: absolute;
+    background: green;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px;
+    z-index: 1000;
+    top:1%;
+    border-radius: 5px;
+    
+  }
+
+  /* Show menuItems when active (icon clicked) */
+  .menuItems.active {
+    display: flex;
+    
+  }
+
+
+  .menuItems ul {
+    flex-direction: column;
+    gap: 15px;
+    
+  }
+
+  .menuItems ul a {
+    color: white;
+  }
+  .menuItems button {
+    margin-top: 10px;
+  }
+}
