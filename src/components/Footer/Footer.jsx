@@ -4,12 +4,12 @@ import './Footer.css';
 function Footer() {
   return (
     <div className='footer'>
-      <div className='top'>
+      <div className='footer-top'>
         <div className='web-logo-text'>
           <h2>JourneyGo</h2>
           <p>Find Your Dream Destination</p>
         </div>
-        <div className='social-contancts'>
+        <div className='social-contacts'>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
             <i className="fab fa-facebook-f"></i>
           </a>
@@ -24,34 +24,35 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className='bottom'>
-        <div className='footer-box Project'>
+      
+      <div className='footer-bottom'>
+        <div className='footer-box'>
           <h5>Project</h5>
-          <a href="">About Us</a>
-          <a href="">Our Mission</a>
-          <a href="">Case Studies</a>
-          <a href="">Testimonials</a>
+          <a href="#">About Us</a>
+          <a href="#">Our Mission</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Testimonials</a>
         </div>
-        <div className='footer-box Community'>
+        <div className='footer-box'>
           <h5>Community</h5>
-          <a href="">Blog</a>
-          <a href="">Forum</a>
-          <a href="">Events</a>
-          <a href="">Ambassadors</a>
+          <a href="#">Blog</a>
+          <a href="#">Forum</a>
+          <a href="#">Events</a>
+          <a href="#">Ambassadors</a>
         </div>
-        <div className='footer-box Help'>
+        <div className='footer-box'>
           <h5>Help</h5>
-          <a href="">Support Center</a>
-          <a href="">FAQs</a>
-          <a href="">Contact Us</a>
-          <a href="">Live Chat</a>
+          <a href="#">Support Center</a>
+          <a href="#">FAQs</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Live Chat</a>
         </div>
-        <div className='footer-box Others'>
+        <div className='footer-box'>
           <h5>Others</h5>
-          <a href="">Privacy Policy</a>
-          <a href="">Terms & Conditions</a>
-          <a href="">Careers</a>
-          <a href="">Sitemap</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Careers</a>
+          <a href="#">Sitemap</a>
         </div>
       </div>
     </div>

@@ -9,13 +9,13 @@
   display: flex;
   background-color: white;
   color: black;
-  height: 10%;
+  height: 70px;
   position: fixed;
   width: 96%;
   border-radius: 10px;
   top: 2%;
   left: 2%;
-  padding: 1%;
+  padding: 0 1.5rem;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -25,14 +25,16 @@
 /* Logo styling */
 .logo {
   font-style: italic;
-  font-size: xx-large;
+  font-size: 1.8rem;
 }
 
-/* Toggle icon (hidden by default) */
+/* Toggle icon */
 .menu-icns {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  z-index: 1100;
+  color: black;
 }
 
 /* Desktop menu layout */
@@ -61,7 +63,7 @@
 }
 
 .menuItems li a:hover {
-  background-color: #baff39;
+  background-color: #50a0e2;
 }
 
 /* Sign Up Button */
@@ -80,47 +82,51 @@
 /* ✅ Responsive Design     */
 /* ------------------------ */
 @media screen and (max-width: 800px) {
-  /* Show menu icon */
   .menu-icns {
-    display: flex;
-    padding: 5px;
-    z-index: 1001;
+    color: blue;
+    display: block;
   }
 
-  /* Hide menuItems by default on small screens */
+  /* Sidebar replaces navbar visually in-place */
   .menuItems {
     display: none;
-    position: absolute;
-    background: green;
-    top: 100%;
-    left: 0;
-    width: 100%;
     flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    gap: 10px;
+    background: #222;
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    width: 102%;
+    border-radius: 10px;
+    padding: 1rem 0;
     z-index: 1000;
-    top:1%;
-    border-radius: 5px;
-    
+    animation: slideDown 0.3s ease-in-out;
   }
 
-  /* Show menuItems when active (icon clicked) */
+  /* Slide down animation */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .menuItems.active {
     display: flex;
-    
   }
-
 
   .menuItems ul {
     flex-direction: column;
     gap: 15px;
-    
   }
 
-  .menuItems ul a {
+  .menuItems li a {
     color: white;
   }
+
   .menuItems button {
     margin-top: 10px;
   }

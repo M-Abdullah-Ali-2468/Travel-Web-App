@@ -1,18 +1,14 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  
-  min-height: 30vh; /* Gives breathing room */
-  height: auto;     /* Grows with content */
-
-
+  background-color: #000;
   color: white;
+  min-height: 30vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
 }
 
-.top {
+/* Top Section */
+.footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,48 +26,51 @@
   color: #ccc;
 }
 
-.social-contancts {
+/* Social Icons */
+.social-contacts {
   display: flex;
   gap: 15px;
 }
 
 .social-icon {
-  font-size: 1.3rem;
-  color: white;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  color: #ddd;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover {
   color: #1da1f2;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-.bottom {
+/* Bottom Section */
+.footer-bottom {
   display: flex;
   justify-content: space-between;
   padding: 30px 40px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-box {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   min-width: 160px;
 }
 
 .footer-box h5 {
-  margin-bottom: 10px;
   font-size: 1.4rem;
   color: #00bcd4;
+  margin-bottom: 10px;
 }
 
 .footer-box a {
-  color: #ddd;
+  color: #ccc;
   text-decoration: none;
-  font-size: 1.15rem; /* Increased font size */
+  font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .footer-box a:hover {
@@ -79,16 +78,17 @@
   text-decoration: underline;
 }
 
-/* Responsive layout */
+/* Responsive */
 @media (max-width: 768px) {
-  .top, .bottom {
+  .footer-top,
+  .footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
   }
 
-  .social-contancts {
+  .social-contacts {
     justify-content: center;
     flex-wrap: wrap;
   }
