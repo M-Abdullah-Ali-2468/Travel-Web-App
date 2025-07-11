@@ -9,6 +9,10 @@ function Navbar() {
     setClick(!isClicked);
   }
 
+  // Active link logic
+  const getLinkClass = ({ isActive }) =>
+    isActive ? 'nav-link active' : 'nav-link';
+
   return (
     <div className="nav_bar">
       <h2 className="logo">
@@ -22,13 +26,28 @@ function Navbar() {
         ></i>
       </div>
 
-      {/* 👇 Add dynamic "active" class based on isClicked */}
       <nav className={`menuItems ${isClicked ? 'active' : ''}`}>
         <ul>
-          <li><NavLink to="/"><i className="fas fa-home"></i> Home</NavLink></li>
-          <li><NavLink to="/about"><i className="fas fa-user"></i> About</NavLink></li>
-          <li><NavLink to="/services"><i className="fas fa-cogs"></i> Services</NavLink></li>
-          <li><NavLink to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink></li>
+          <li>
+            <NavLink to="/" className={getLinkClass}>
+              <i className="fas fa-home"></i> Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={getLinkClass}>
+              <i className="fas fa-user"></i> About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className={getLinkClass}>
+              <i className="fas fa-cogs"></i> Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={getLinkClass}>
+              <i className="fas fa-envelope"></i> Contact
+            </NavLink>
+          </li>
         </ul>
         <button><i className="fas fa-user-plus"></i> Sign Up</button>
       </nav>

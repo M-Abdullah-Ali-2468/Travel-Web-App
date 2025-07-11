@@ -53,7 +53,8 @@
   list-style: none;
 }
 
-.menuItems li a {
+/* NavLink default */
+.nav-link {
   text-decoration: none;
   color: black;
   font-size: 18px;
@@ -62,8 +63,16 @@
   transition: 0.3s;
 }
 
-.menuItems li a:hover {
+/* Hover effect */
+.nav-link:hover {
   background-color: #50a0e2;
+  color: white;
+}
+
+/* Active link */
+.nav-link.active {
+  background-color: #50a0e2;
+  color: white;
 }
 
 /* Sign Up Button */
@@ -87,7 +96,6 @@
     display: block;
   }
 
-  /* Sidebar replaces navbar visually in-place */
   .menuItems {
     display: none;
     flex-direction: column;
@@ -102,7 +110,6 @@
     animation: slideDown 0.3s ease-in-out;
   }
 
-  /* Slide down animation */
   @keyframes slideDown {
     from {
       opacity: 0;
@@ -129,5 +136,11 @@
 
   .menuItems button {
     margin-top: 10px;
+  }
+
+  /* Active link on mobile */
+  .menuItems .nav-link.active {
+    background-color: #50a0e2;
+    color: white;
   }
 }
